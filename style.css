@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+    display:flex;
+    justify-content: space-evenly;
+}
+
+#board {
+    display:grid;
+    grid-template-rows: repeat(3,128px);
+    grid-template-columns: repeat(3,128px);
+}
+
+.pad:hover {
+    background-color: rgb(0,0,0,0.1);
+    cursor: pointer;
+}
+
+[id='0'] {
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+}
+[id='1'] {
+    border-bottom: 3px solid black;
+}
+[id='2'] {
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+}
+[id='3'] {
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+}
+[id='4'] {
+    border-bottom: 3px solid black;
+}
+[id='5'] {
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+}
+[id='6'] {
+    border-right: 3px solid black;
+}
+[id='8'] {
+    border-left: 3px solid black;
+}
+
