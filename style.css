@@ -1,11 +1,15 @@
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    padding:0;
+    margin:0;
 }
 
 #container {
     display:flex;
+    margin-top: 80px;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 #board {
@@ -13,38 +17,84 @@
     grid-template-rows: repeat(3,128px);
     grid-template-columns: repeat(3,128px);
 }
-
+.pad {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
 .pad:hover {
     background-color: rgb(0,0,0,0.1);
     cursor: pointer;
 }
 
-[id='0'] {
-    border-right: 3px solid black;
-    border-bottom: 3px solid black;
+#fakeBoard {
+    display:none;
+    grid-template-rows: repeat(3,128px);
+    grid-template-columns: repeat(3,128px);
 }
-[id='1'] {
-    border-bottom: 3px solid black;
+.fakePad {
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
-[id='2'] {
-    border-left: 3px solid black;
-    border-bottom: 3px solid black;
-}
-[id='3'] {
-    border-right: 3px solid black;
-    border-bottom: 3px solid black;
-}
-[id='4'] {
-    border-bottom: 3px solid black;
-}
-[id='5'] {
-    border-left: 3px solid black;
-    border-bottom: 3px solid black;
-}
-[id='6'] {
-    border-right: 3px solid black;
-}
-[id='8'] {
-    border-left: 3px solid black;
+.player {
+    text-align: center;
 }
 
+
+.winner {
+    display:flex;
+    flex-direction: column;
+    margin-top: 25px;
+    align-items: center;
+}
+
+#x {
+    color:red;
+    font-size: 50px; 
+}
+
+#o {
+    font-size: 50px;
+    color:orange;
+}
+
+[id='0'] {
+    border-right: 5px solid grey;
+    border-bottom: 5px solid grey;
+}
+[id='1'] {
+    border-bottom: 5px solid grey;
+}
+[id='2'] {
+    border-left: 5px solid grey;
+    border-bottom: 5px solid grey;
+}
+[id='3'] {
+    border-right: 5px solid grey;
+    border-bottom: 5px solid grey;
+}
+[id='4'] {
+    border-bottom: 5px solid grey;
+}
+[id='5'] {
+    border-left: 5px solid grey;
+    border-bottom: 5px solid grey;
+}
+[id='6'] {
+    border-right: 5px solid grey;
+}
+[id='8'] {
+    border-left: 5px solid grey;
+}
+
+@keyframes appear {
+    0% {
+        color:transparent;
+    }
+    50% {
+        color:red;
+        animation-name:none;
+    }
+    
+}
